@@ -14,9 +14,9 @@ class Camera:
         os.makedirs(self.outputFilePath, exist_ok=True) # Creates the nested directories needed by the user
                 
                         
-    def record(self, _secondsToRecord, _filename):
+    def record(self, _secondsToRecord, _filename, _fps = 30.0, _height = 640, _width = 480):
         filePath = self.outputFilePath + "/" + _filename + ".mp4"
-        output = cv2.VideoWriter(filePath, self.vid_cod, 30.0, (640 , 480))
+        output = cv2.VideoWriter(filePath, self.vid_cod, _fps, (_height , _width))
 
         endTime = time.time() + _secondsToRecord
         while(time.time() <= endTime):
@@ -33,7 +33,3 @@ class Camera:
     def disconnectCamera(self):
         # Disconects camera
         self.vid_capture.release()
-
-cam = Camera("./go/to/there/")
-cam.record(5, 'swag')
-cam.disconnectCamera()
