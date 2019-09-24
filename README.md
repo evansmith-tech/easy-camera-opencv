@@ -11,6 +11,7 @@ cam.disconnectCamera()
 ```
 Thats it!
 # Things to know
+* If there is a problem with your code, its probably opencv2 to be honest.
 * Outputs .avi
 * Uses XVID codec
 * Record defaults to  30 fps
