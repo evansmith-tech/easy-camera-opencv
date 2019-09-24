@@ -4,8 +4,8 @@
 ```python
 # Create an object to allow for configuration
 cam = Camera("./go/to/a/directory/")
-# Tell it to record: object.record(seconds, 'filename')
-cam.record(5, 'filenameWithoutExtenstion')
+# Tell it to record: object.record(seconds, 'filename', fps, height, width)
+cam.record(5, 'filenameWithoutExtenstion', 30, 640, 480)
 # Disconnects the external camera from the software if needed. 
 cam.disconnectCamera()
 ```
@@ -13,6 +13,8 @@ Thats it!
 # Things to know
 * Outputs .avi
 * Uses XVID codec
+* Record defaults to  30 fps
+* Record defaults to Height: 640 Width: 480
 
 # Whats coming
 * Switching cameras
