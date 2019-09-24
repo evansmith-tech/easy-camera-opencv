@@ -33,3 +33,6 @@ class Camera:
     def disconnectCamera(self):
         # Disconects camera
         self.vid_capture.release()
+
+    def switchCameras(self, _newValue):
+        self.vid_capture = cv2.VideoCapture(_newValue)
