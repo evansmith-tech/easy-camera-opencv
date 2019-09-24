@@ -9,6 +9,9 @@ cam.record(5, 'filenameWithoutExtenstion')
 # Disconnects the external camera from the software if needed. 
 cam.disconnectCamera()
 ```
+# Things to know
+* Outputs .avi
+* Uses XVID codec
 Thats it!
 # Whats coming
 * Switching cameras
