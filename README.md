@@ -8,6 +8,8 @@ cam = Camera("./go/to/a/directory/")
 cam.record(5, 'filenameWithoutExtenstion', 30, 640, 480)
 # Disconnects the external camera from the software if needed. 
 cam.disconnectCamera()
+# You can pass whatever parameter to cv2.VideoCapture() into it you need to
+cam.switchCamera(parameter)
 ```
 Thats it!
 # Things to know
