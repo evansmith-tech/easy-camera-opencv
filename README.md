@@ -2,7 +2,7 @@
  Easily take external camera input with configurations
 # How to use
 ```python
-# Create an object to allow for configuration
+# Create an object (NOTE: It will build a directory path for you if it doesn't exist)
 cam = Camera("./go/to/a/directory/")
 
 # Record for 5 Seconds to a named file
@@ -13,7 +13,7 @@ cam.record(5, 'filenameWithoutExtenstion', 30, 640, 480)
 # Disconnects the external camera from the software if needed. 
 cam.disconnectCamera()
 # Switch to a different camera (note: uses the same Camera object). 
-cam.switchCamera(parameter)
+cam.switchCamera(some_sort_of_cv2.VideoCapture_parameter)
 ```
 Thats it!
 # Things to know
