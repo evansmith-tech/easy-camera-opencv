@@ -4,11 +4,15 @@
 ```python
 # Create an object to allow for configuration
 cam = Camera("./go/to/a/directory/")
-# Tell it to record: object.record(seconds, 'filename', fps, height, width)
-cam.record(5, 'filenameWithoutExtenstion', 30, 640, 480)
+
+# Record for 5 Seconds to a named file
+cam.record(5, 'filenameWithoutExtenstion')
+# Or to use specifics: object.record(seconds, 'filename', fps, height, width)
+cam.record(5, 'filenameWithoutExtenstion', 30, 640, 480) 
+
 # Disconnects the external camera from the software if needed. 
 cam.disconnectCamera()
-# You can pass whatever parameter to cv2.VideoCapture() into it you need to
+# Switch to a different camera (note: uses the same Camera object). 
 cam.switchCamera(parameter)
 ```
 Thats it!
@@ -16,9 +20,9 @@ Thats it!
 * If there is a problem with your code, its probably opencv2 to be honest.
 * Outputs .avi
 * Uses XVID codec
-* Record defaults to  30 fps
-* Record defaults to Height: 640 Width: 480
+* Recording FPS defaults to what cv2 gets as a default from your camera
+* Recording resolution defaults to what cv2 gets as a default from your camera
+
 
 # Whats coming
-* Switching cameras
 * More configurations

@@ -14,7 +14,7 @@ class Camera:
         os.makedirs(self.outputFilePath, exist_ok=True) # Creates the nested directories needed by the user
                 
                         
-    def record(self, _secondsToRecord, _filename, _fps = 30.0, _height = 640, _width = 480):
+    def record(self, _secondsToRecord, _filename, _fps = self.get(cv2.CV_CAP_PROP_FPS), _height = self.get(cv2.CV_CAP_PROP_FRAME_HEIGHT), _width = self.get(cv2.CV_CAP_PROP_FRAME_WIDTH)):
         filePath = self.outputFilePath + "/" + _filename + ".mp4"
         output = cv2.VideoWriter(filePath, self.vid_cod, _fps, (_height , _width))
 
