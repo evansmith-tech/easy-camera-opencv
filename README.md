@@ -12,7 +12,7 @@ cam.record(5, 'filenameWithoutExtenstion', 30, 640, 480)
 
 # Disconnects the external camera from the software if needed. 
 cam.disconnectCamera()
-# Switch to a different camera (note: uses the same Camera object). 
+# Switch to a different camera (NOTE: uses the same Camera object). 
 cam.switchCamera(some_sort_of_cv2.VideoCapture_parameter)
 ```
 Thats it!
