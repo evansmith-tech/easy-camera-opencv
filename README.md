@@ -17,7 +17,8 @@ cam.switchCamera(some_sort_of_cv2.VideoCapture_parameter)
 ```
 Thats it!
 # Things to know
-* If there is a problem with your code, its probably opencv2 to be honest.
+* If there is a problem with your code, its probably openCV2 to be honest.
+* If there is a problem, try rolling back to older versions of openCV2 until it works
 * Outputs .avi
 * Uses XVID codec
 * Recording FPS defaults to what cv2 gets as a default from your camera
